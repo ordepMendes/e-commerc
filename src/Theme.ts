@@ -5,8 +5,9 @@ const Theme = {
         sucess: '#22bb33',
         warning: '#f0ad4e',
         error: '#bb2124',
-        primary: '#3A778C',
-        secondary: '#0B1B27'
+        primary: '#1565C0',
+        secondary: '#0B1B27',
+        gray: '#e0e0e0'
     },
     fontFamily: {
         primary: 'Montserrat'
