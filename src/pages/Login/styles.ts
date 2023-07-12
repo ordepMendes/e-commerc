@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import ButtonMui from '@mui/material/Button';
 import Theme from '../../Theme';
 
 export const Main = styled.main`

@@ -67,6 +67,7 @@ function Login() {
             </Button>
           </div>
         </Box>
+        <p>Esqueceu sua senha?</p>
       </Form>
     </Main>
   );
