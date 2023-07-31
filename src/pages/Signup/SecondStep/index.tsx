@@ -1,9 +1,13 @@
 import { Button, TextField } from "@mui/material";
 import { Form } from "./styles";
 
-function SecondStep() {
+type SecondStepType = {
+  onSubmit: () => void;
+}
+
+function SecondStep({onSubmit}: SecondStepType) {
   return (
-    <Form>
+    <Form onSubmit={onSubmit}>
       <div>
         <h1>Create your account</h1>
         <p>Agora digite seu e-mail.</p>

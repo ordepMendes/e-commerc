@@ -8,4 +8,8 @@ export const Form = styled.form`
     border: 1px solid ${Theme.colors.gray};
     padding: 1.5rem;
     border-radius: 10px;
+
+    h1{
+        margin-bottom: 0.5rem;
+    }
 `;

@@ -4,11 +4,13 @@ import { FcGoogle } from "react-icons/fc";
 import { BsWindows } from "react-icons/bs";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { IconButton, TextField, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const navigate = useNavigate();
 
   const onSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -26,6 +28,10 @@ function Login() {
   const getPassword = (e: ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
+
+  const navigateToSignup = () => {
+    navigate('/Signup');
+  }
 
   return (
     <Main>
@@ -54,7 +60,7 @@ function Login() {
         </Button>
         <p>
           Don't have an account?
-          <span onClick={() => console.log("teste")}> Sign up</span>
+          <span onClick={navigateToSignup}> Sign up</span>
         </p>
         <Box>
           <p>Or</p>

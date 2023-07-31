@@ -1,9 +1,18 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import {ChangeEvent} from 'react';
 import { Button, TextField } from "@mui/material";
 import { Form } from "./styles";
 
-function FirstStep() {
+type FirstStepType = {
+  onSubmit: () => void,
+  valueFirstName: any,
+  onChangeFirstName: any,
+
+}
+
+function FirstStep({onSubmit, valueFirstName, onChangeFirstName}: FirstStepType) {
   return (
-    <Form>
+    <Form onSubmit={onSubmit}>
       <div>
         <h1>Create your account</h1>
         <p>Vamos começar! Digite seu nome.</p>
@@ -12,6 +21,8 @@ function FirstStep() {
         placeholder="Digite seu primeiro nome"
         label="First Name"
         type="text"
+        value={valueFirstName}
+        onChange={onChangeFirstName}
       />
       <TextField
         placeholder="Digite seu sobrenome"
