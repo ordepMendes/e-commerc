@@ -26,6 +26,12 @@ export const Form = styled.form`
         cursor: pointer;
     }
 
+    small{
+        display: flex;
+        color: ${Theme.colors.error};
+        align-self: flex-start;
+    }
+
 `;
 
 export const Box = styled.div` 
